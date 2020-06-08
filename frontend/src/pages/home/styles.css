@@ -1,0 +1,14 @@
+body{
+    max-width: 100%;
+}
+.container-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.container-home h1 {
+    font-size: 4em;
+}
