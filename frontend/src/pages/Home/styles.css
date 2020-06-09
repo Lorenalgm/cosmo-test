@@ -6,7 +6,7 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-body .container-home{
+.container-home{
     text-align: center;
     height: 40%;
 }
