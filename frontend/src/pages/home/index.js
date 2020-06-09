@@ -7,9 +7,9 @@ export default function Home() {
             <div className="container-home">
                 <h1>Busca<span>Dev</span></h1>
                 <form>
-                    <input type="text" placeholder="Usuário do github" name="username" />
+                    <input className="username" type="text" placeholder="Usuário do github" name="username" />
+                    <input className="submit" type="submit" value="Buscar" />
                 </form>
-                <input type="submit" value="Buscar" />
             </div>
         </body>
     )

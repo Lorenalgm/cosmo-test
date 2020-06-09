@@ -1,14 +1,72 @@
 body{
     max-width: 100%;
-}
-.container-home{
+    height: 100vh;
+    background-color: #0B0A0A;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+}
+body .container-home{
     text-align: center;
+    height: 40%;
 }
 
 .container-home h1 {
-    font-size: 4em;
+    font-size: 3.6em;
+    color: var(--vermelho);
+}
+
+.container-home h1 span {
+   color: rgba(255, 255, 255, 0.72);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form .username {
+    width: 27%;
+    height: 1.3em;
+    border-radius: 0.5em;
+    border: none;
+    padding: 19px;
+    background-color: rgba(61, 61, 61, 0.74);
+    color: #ffff;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.submit {
+    margin-top: 1em;
+    width: 30%;
+    height: 3.4em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--vermelho);
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    transition: 2ms;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.submit:hover {
+    opacity: 90%;
+}
+
+@media all and (max-width: 800px) {
+    form .username{
+        width: 15em;
+        height: 1em;
+    }
+
+    form .submit{
+        width: 20em;
+        height: 3em;
+    }
 }
