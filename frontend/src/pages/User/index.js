@@ -27,6 +27,9 @@ export default function User() {
                     <p>{user.login}</p>
                     <p>{user.bio}</p>
                     <p>{user.avatar_url}</p>
+                    <p>{user.email}</p>
+                    <p>{user.followers}</p>
+                    <p>{user.following}</p>
                 </div>
 
                 : 
