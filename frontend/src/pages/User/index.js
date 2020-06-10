@@ -48,7 +48,7 @@ export default function User() {
                     <div className="dev">
                         <div className="left-container">
                             <img src={user.avatar_url} alt="Avatar" />
-                            <h2>{user.login}</h2>
+                            <h2>@{user.login}</h2>
                             <p className="bio">{user.bio}</p>
                             <p className="email">{user.email}</p>
                         </div>
@@ -66,11 +66,12 @@ export default function User() {
                             <div className="repositories">
                                 {
                                    repositories.map(repository =>(
-                                       <div>
-                                            <div>{repository.name}</div>
+                                       <div className="repository">
+                                            <div>{repository.name} {repository.stargazers_count} stars</div>
                                         <div>{repository.description}</div>
-                                        <div>{repository.html_url}</div>
-                                        <div>{repository.stargazers_count}</div>
+                                        <a href={repository.html_url}>
+                                        <button>Visualizar repositório</button>
+                                        </a>
                                        </div>
                                     ))
                                }
