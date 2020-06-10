@@ -30,6 +30,10 @@ export default function User() {
         
     }, [username]);
 
+    repositories.sort((a, b) => {
+        return b.stargazers_count - a.stargazers_count;
+    });
+
     return (
         <div className="container-user">
             <div className="header">
