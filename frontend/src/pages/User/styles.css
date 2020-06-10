@@ -1,3 +1,15 @@
+.dev {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left-container img {
+    height: 15em;
+    width: 15em;
+    border-radius: 2em;
+}
+
 .container-user {
     display: flex;
     flex-direction: column;
