@@ -9,6 +9,7 @@ body{
 .container-home{
     text-align: center;
     height: 40%;
+    max-width: 100%;
 }
 
 .container-home h1 {
