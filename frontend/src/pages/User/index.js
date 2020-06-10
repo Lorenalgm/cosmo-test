@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function User() {
     const username = localStorage.getItem('username');
-    const [loading, setLoading] = useState(true);
     const [user, setUser] = useState('');
     const [repositories, setRepositories] = useState([]);
 
@@ -21,7 +22,6 @@ export default function User() {
 
             if(response){
                 setUser(response.data);
-                setLoading(false);
                 SearchRepositories();
             }
         }
@@ -42,52 +42,59 @@ export default function User() {
                     <button>Início</button>
                 </Link>
             </div>
+
             {
-                !loading && (
+               
                     user ?
-                    <div className="dev">
+                    (<div className="dev">
                         <div className="left-container">
                             <img src={user.avatar_url} alt="Avatar" />
                             <h2>@{user.login}</h2>
                             <p className="bio">{user.bio}</p>
                             <p className="email">{user.email}</p>
-                        </div>
-                        <div className="principal-container">
                             <div className="info">
-                                <div>
-                                    <h4>{user.following}</h4>
+                                <div className="following">
                                     <p>Seguindo</p>
+                                    <h4>{user.following}</h4>
                                 </div>
-                                <div>
+                                <div className="followers">
                                     <h4>{user.followers}</h4>
                                     <p>Seguidores</p>
                                 </div>
                             </div>
+                        </div>
+                        <div className="principal-container">
+                            
                             <div className="repositories">
                                 {
                                    repositories.map(repository =>(
                                        <div className="repository">
-                                            <div>{repository.name} {repository.stargazers_count} stars</div>
-                                        <div>{repository.description}</div>
-                                        <a href={repository.html_url}>
-                                        <button>Visualizar repositório</button>
+                                        <div className="stars">
+                                        <h1>{repository.stargazers_count}</h1>
+                                        <h3>stars</h3>
+                                        </div>
+                                        <div className="repository-content">
+                                            <h2>{repository.name}</h2>
+                                            <p>{repository.description}</p>
+                                        </div>
+                                        <a target="_blank" rel="noopener noreferrer" href={repository.html_url}>
+                                           <FontAwesomeIcon icon={faChevronRight} className="arrow"  />
                                         </a>
                                        </div>
                                     ))
                                }
                             </div>
                         </div>
-                    </div>
+                    </div>)
 
                     :
 
-                    <div className="user-not-found">
+                    (<div className="user-not-found">
                         <h2>Usuário não encontrado :(</h2>
                         <Link to="/">
                             <button>Tente novamente</button>
                         </Link>
-                    </div>
-                )
+                    </div>)
             }
 
         </div>

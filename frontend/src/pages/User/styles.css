@@ -24,13 +24,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .left-container img {
     height: 15em;
     width: 15em;
     border-radius: 2em;
+    margin-right: 6em;
 }
 
 .left-container h2 {
@@ -44,32 +45,81 @@
 .info {
     display: flex;
     flex-direction: row;
-    color: #ffff;
     text-align: center;
     line-height: 4px;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: left;
 }
 
 .info div {
-    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2em;
+}
+
+.following p {
+    margin-right: 0.5em;
+}
+
+.followers h4 {
+    margin-right: 0.5em;
+}
+
+.info div p {
+    color: rgba(167, 164, 164, 0.507);
 }
 
 .info div h4{
     color: var(--vermelho);
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .repository {
     background-color: #3D3D3D;
     border-radius: 10px;
     text-align: center;
+    padding: 2px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 34em;
+    height: 7em;
+}
+.stars h1 {
+    color: var(--vermelho);
+    line-height: 3px;
 }
 
-.repository div {
-    margin-top: 2em;
+.stars h3 {
+    color: rgb(218, 212, 212);
+    line-height: 3px;
 }
 
+.repository-content {
+    text-align: left;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+}
 
+.repository h2 {
+    line-height: 3px;
+    color:#ffff;
+}
+
+.repository p {
+    color: rgb(173, 172, 172);
+}
+
+.repository a .arrow{
+    color: var(--vermelho);
+    width:30px;
+    height: 60px;
+}
 .container-user .user {
     display: flex;
     flex-direction: column;
@@ -111,4 +161,46 @@ h2 {
 
 button:hover {
     opacity: 90%;
+}
+
+@media all and (max-width: 800px) {
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left-container img {
+        margin-top: 2em;
+        margin-right: 0;
+    }
+
+
+    .stars h1{
+        font-size: 20px;
+    }
+    
+    .repository-content{
+        margin-left: 0.3em;
+    }
+
+    .repository-content h2 {
+        font-size: 15px;
+    }
+    .repository-content p {
+        font-size: 15px;
+    }
+    .info div {
+        display: flex;
+        margin: 1em;
+    }
+    .principal-container{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .repository {
+        width: 20em;
+    }
 }
