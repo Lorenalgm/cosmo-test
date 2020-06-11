@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import axios from 'axios';
+import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -13,12 +13,12 @@ export default function User() {
     useEffect(() => {
         
         async function SearchRepositories(){
-            const response = await axios.get(`https://api.github.com/users/${username}/repos`)
+            const response = await api.get(`/users/${username}/repos`)
             setRepositories(response.data);
         }
 
         async function SearchUser(){
-            const response = await axios.get(`https://api.github.com/users/${username}`)
+            const response = await api.get(`/users/${username}`)
 
             if(response){
                 setUser(response.data);
