@@ -12,14 +12,14 @@
 
 ## :checkered_flag: Índice
 
-* [Sobre](#sobre)
-* [Demo](#demo)
+* [Sobre](#-sobre)
+* [Demo](#-demo)
   * [Live](#live)
   * [Web](#web)
-  * [Mobile](#mobile)
-* [Tecnologias](#tecnologias)
-* [Como utilizar](#como-utilizar)
-* [Contatos](#contatos)
+  * [Mobile](#-mobile)
+* [Tecnologias](#-tecnologias)
+* [Como utilizar](#-como-utilizar)
+* [Contatos](#-contatos)
 
 ## :bulb: Sobre
 O objetivo do desafio é implementar uma aplicação client-side, 
