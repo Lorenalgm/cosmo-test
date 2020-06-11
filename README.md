@@ -10,7 +10,7 @@
      <a href="https://gitlab.com/daniel259/cosmo-test/">Desafio</a> 
   </p> 
 
-## Índice
+## :checkered_flag: Índice
 
 * [Sobre](#sobre)
 * [Demo](#demo)
@@ -21,7 +21,7 @@
 * [Como utilizar](#como-utilizar)
 * [Contatos](#contatos)
 
-## Sobre
+## :bulb: Sobre
 O objetivo do desafio é implementar uma aplicação client-side, 
 que consulte a API do GitHub e mostre os repositórios de um determinado usuário.
 <br><br>O usuário pode buscar usuários do github, ver detalhes desse usuário 
@@ -29,22 +29,27 @@ que consulte a API do GitHub e mostre os repositórios de um determinado usuári
 e visualizar a listagem dos repositórios, ordenados pelo número decrescente de estrelas
 
 
-## Demo
+## :iphone: Demo
 
 ### Live
 
 A aplicação poderá ser acessada pelo link: https://cosmo-test.now.sh/
 
 ### Web
+<p align="center">
+<img src="https://i.imgur.com/Dktu6d6.png" width="580" height="380">
+</p>
 
 
 ### Mobile
+<p align="center">
+<img src="https://i.imgur.com/kOTI8vF.png" width="480" height="580">
+</p>
 
-
-### Tecnologias:
+### :computer: Tecnologias:
 - Reactjs
 
-### Como Utilizar
+### :wrench: Como Utilizar
 
 1. Clone esse repositório:
 ```sh 
@@ -61,7 +66,7 @@ yarn start
 ```
 5. Pronto! O desafio está disponível em http://localhost:3000/
 
-## Contatos
+## :mailbox_with_no_mail: Contatos
 E-mail: lgoesmontes@gmail.com<br>
 Linkedin: https://www.linkedin.com/in/lorenagmontes/
 
